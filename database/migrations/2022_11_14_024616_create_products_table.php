@@ -18,6 +18,8 @@ return new class extends Migration
             $table->integer("type_id");
             $table->string("product_name");
             $table->integer("price");
+            $table->string("color")->nullable();
+            $table->string("size")->nullable();
             $table->integer("status");
             $table->integer("view");
             $table->timestamps();
