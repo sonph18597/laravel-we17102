@@ -23,6 +23,9 @@ Route::get('/logout',['as'=>'logout','uses'=>'Auth\LoginController@getLogout']);
 
 Route::middleware(['auth'])->group(function (){
     // tất cả đường link muốn bảo vệ chỉ cần viết vào đây
-    Route::get('/test', 'TestController@index');
-    Route::get('/category',['as'=>'category','uses'=>'admin\CategoryController@index']);
+    Route::get('/user', 'admin\UserController@index')->name('route_BackEnd_User_index');
+    Route::get('/category','admin\CategoryController@index')->name('route_BackEnd_Category_index');
+    Route::match(['get','post'],'/user/add',"admin\UserController@add");
+    Route::get('/user/detail/{id}','admin\UserController@detail')->name('route_BackEnd_User_detail');
+    Route::post('/user/update/{id}','admin\UserController@update')->name('route_BackEnd_User_update');
 });
