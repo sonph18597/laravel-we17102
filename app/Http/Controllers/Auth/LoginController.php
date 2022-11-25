@@ -12,10 +12,10 @@ class loginController extends Controller
 {
     public function getLogin(){
         return view('auth.login');
+
     }
     public function postLogin( Request $request){
 //        dd($request->all());
-
         $rules =[
             'email'=>'required|email',
             'password'=>'required'
@@ -35,7 +35,7 @@ class loginController extends Controller
 //                dd($email,$password);
 
             if (Auth::attempt(['email'=>$email,'password'=>$password])){
-                return view('welcome');
+                return redirect('user');
             }else{
                 Session::flash('error','Sai Email và Mật Khẩu');
                 return  redirect('login');

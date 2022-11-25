@@ -10,7 +10,7 @@ class Category extends Model
 {
     use HasFactory;
     protected $table="category";
-    protected $fillable=['id','name','email'];
+    protected $fillable=['id','category_name','status'];
 
     public function loadListWithPager($param=[])
     {

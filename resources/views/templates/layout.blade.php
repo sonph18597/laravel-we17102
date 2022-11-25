@@ -1,7 +1,6 @@
-{{--@php--}}
-{{--    $objUser = \Illuminate\Support\Facades\Auth::user();--}}
-{{--    dd($objUser);--}}
-{{--@endphp--}}
+@php
+    $objUser = \Illuminate\Support\Facades\Auth::user();
+@endphp
 <!DOCTYPE html>
 <html>
 <head>
@@ -153,15 +152,15 @@
 
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <li class="dropdown user user-menu" >
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/img/no-avartar.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs"> Thắng </span>
+                            <span class="hidden-xs"> {{$objUser->name}} </span>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
                                 <p style="padding: 10px;">
-                                    <i class="fa fa-user"></i> Email: thang@gmail.com<br>
+                                    <i class="fa fa-user"></i> {{$objUser->email}}<br>
 
                                 </p>
                             </li>
@@ -189,21 +188,28 @@
                     <img src="/img/no-avartar.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p> Hoàng Thắng </p>
+                    <p> {{$objUser->name}} </p>
 
                 </div>
                 <div class="clearfix">
-                    <p class="text-info">Thắng@gmail.com</p>
+                    <p class="text-info">{{$objUser->email}}</p>
                 </div>
 
             </div>
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href="#"><i class="fa fa-user"></i> <span>Người dùng</span></a>
+                    <a href="/user"><i class="fa fa-user"></i> <span>Người Dùng</span></a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i
-                                    class="fa fa-circle-o"></i> Người dùng</a></li>
+                        <li><a href="/user/add"><i
+                                    class="fa fa-circle-o"></i> Thêm người dùng</a></li>
+                    </ul>
+                </li>
+                <li class=" active menu-open ">
+                    <a href="/category"><i class="fa fa-clipboard"></i> <span>Danh Mục</span></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/category/add"><i
+                                    class="fa fa-circle-o"></i> Thêm danh mục</a></li>
                     </ul>
                 </li>
             </ul>
