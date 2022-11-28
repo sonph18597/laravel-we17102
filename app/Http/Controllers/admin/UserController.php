@@ -32,6 +32,10 @@ class UserController extends Controller
             $params =[];
             $params['cols']= $request ->post();
             unset($params['cols']['_token']);
+            if ($request->hasFile('cmt_mat_truoc') && $request->file('cmt_mat_truoc')->isValid())
+            {
+                $params['cols']['avatar'] = $this->uploadFile($request->file('cmt_mat_truoc'));
+            }
             $modelTes = new Test;
             $res = $modelTes ->saveNew($params);
             if ($res == null){
@@ -65,12 +69,17 @@ class UserController extends Controller
         $res= $modelNguoiDung->saveUpdate($params);
         if ($res == null){
             return  redirect()->route($method_route,['id'=>$id]);
-        }elseif ($res == 1){
+        }
+        elseif ($res == 1){
             Session::flash('success',"Update thanh cong".$id);
             return  redirect()->route($method_route,['id'=>$id]);
         }else{
             Session::flash('error',"Update that bai".$id);
             return  redirect()->route($method_route,['id'=>$id]);
         }
+    }
+    public function uploadFile($file) {
+        $fileName = time().'_'.$file->getClientOriginalName();
+        return $file->storeAs('cmnd',$fileName,'public');
     }
 }
