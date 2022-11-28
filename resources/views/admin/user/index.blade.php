@@ -153,7 +153,7 @@
                             <th class="text-center">
                                 Email
                             </th>
-{{--                            <th class="text-center">Trạng thái</th>--}}
+                            <th class="text-center">Anh</th>
                         </tr>
 
                         @foreach($list as $item)
@@ -162,6 +162,11 @@
                             <td class="text-center">{{$item->id}}</td>
                             <td class="text-center"><a style="color:#333333;font-weight: bold;" href="{{route('route_BackEnd_User_detail',['id'=>$item->id])}}" style="white-space:unset;text-align: justify;">{{$item->name}}<i class="fa fa-edit"></i></a></td>
                             <td class="text-center">{{$item->email}}</td>
+                            <td class="text-center"><img id="mat_truoc_preview"
+                                                         src="{{ $item->avatar?''.Storage::url($item->avatar):'http://placehold.it/100x100' }}"
+                                                         alt="your image"
+                                                         style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/></td>
+
                         </tr>
                         @endforeach
                     </table>
