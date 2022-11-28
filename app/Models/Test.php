@@ -12,7 +12,7 @@ class Test extends Model
 {
     use HasFactory;
     protected $table="users";
-    protected $fillable=['id','name','email'];
+    protected $fillable=['id','name','email','avatar'];
 
     public function loadListWithPager($param=[])
     {
