@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
-class Category extends Model
+class Product extends Model
 {
     use HasFactory;
-    protected $table="category";
-    protected $fillable=['id','category_name','status'];
+    protected $table="products";
+    protected $fillable=['id','category_id','product_name','price','image','color','size','status','view'];
 
     public function loadListWithPager($param=[])
     {
@@ -42,5 +41,8 @@ class Category extends Model
         $res = DB::table($this->table)->where('id', $params['cols']['id'])->update($dataUpdate);
         return $res;
     }
-
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

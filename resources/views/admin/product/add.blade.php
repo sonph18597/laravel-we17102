@@ -76,29 +76,22 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="ten_de_thi" class="col-md-3 col-sm-4 control-label">Tên người dùng <span class="text-danger">(*)</span></label>
+                            <label for="ten_de_thi" class="col-md-3 col-sm-4 control-label">Tên sản phẩm <span class="text-danger">(*)</span></label>
 
                             <div class="col-md-9 col-sm-8">
-                                <input type="text" name="name" id="name" class="form-control" value="@isset($request['name']){{ $request['name'] }}@endisset">
+                                <input type="text" name="product_name" id="product_name" class="form-control" value="@isset($request['product_name']){{ $request['product_name'] }}@endisset">
                                 <span id="mes_sdt"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-md-3 col-sm-4 control-label">Email <span class="text-danger">(*)</span></label>
+                            <label for="email" class="col-md-3 col-sm-4 control-label">Price <span class="text-danger">(*)</span></label>
                             <div class="col-md-9 col-sm-8">
-                                <input type="text" name="email" id="email" class="form-control" value="@isset($request['email']){{ $request['email'] }}@endisset">
+                                <input type="text" name="price" id="price" class="form-control" value="@isset($request['price']){{ $request['price'] }}@endisset">
                                 <span id="mes_sdt"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-md-3 col-sm-4 control-label">Mật khẩu <span class="text-danger">(*)</span></label>
-                            <div class="col-md-9 col-sm-8">
-                                <input type="password" name="password" id="password" class="form-control" value="@isset($request['password']){{ $request['password'] }}@endisset">
-                                <span id="mes_sdt"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 col-sm-4 control-label">Ảnh CMND/CCCD</label>
+                            <label class="col-md-3 col-sm-4 control-label">Ảnh</label>
                             <div class="col-md-9 col-sm-8">
                                 <div class="row">
                                     <div class="col-xs-6">
@@ -106,9 +99,43 @@
                                              style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-fluid"/>
                                         <input type="file" name="cmt_mat_truoc" accept="image/*"
                                                class="form-control-file @error('cmt_mat_truoc') is-invalid @enderror" id="cmt_truoc">
-                                        <label for="cmt_truoc">Mặt trước</label><br/>
+                                        <label for="cmt_truoc">Hình</label><br/>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-md-3 col-sm-4 control-label">Màu <span class="text-danger">(*)</span></label>
+                            <div class="col-md-9 col-sm-8">
+                                <input type="text" name="color" id="color" class="form-control" value="@isset($request['color']){{ $request['color'] }}@endisset">
+                                <span id="mes_sdt"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-md-3 col-sm-4 control-label">Size <span class="text-danger">(*)</span></label>
+                            <div class="col-md-9 col-sm-8">
+                                <input type="text" name="size" id="size" class="form-control" value="@isset($request['size']){{ $request['size'] }}@endisset">
+                                <span id="mes_sdt"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ten_de_thi" class="col-md-3 col-sm-4 control-label">Status<span class="text-danger">(*)</span></label>
+
+                            <div class="col-md-9 col-sm-8">
+                                <select name="status" id="status" class="form-control input-sm m-bot10">
+                                    <option value="0">Hết hàng</option>
+                                    <option value="1">Còn hàng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-md-3 col-sm-4 control-label">Danh Mục <span class="text-danger">(*)</span></label>
+                            <div class="col-md-9 col-sm-8">
+                                <select name="category_id" id="category_id" class="form-control input-sm m-bot10">
+                                    @foreach($listCategory as $item)
+                                        <option value="{{$item->id}}">{{$item->category_name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -118,7 +145,7 @@
             <!-- /.box-body -->
             <div class="text-center">
                 <button type="submit" class="btn btn-primary"> Save</button>
-                <a href="{{ route('route_BackEnd_User_index') }}" class="btn btn-default">Cancel</a>
+                <a href="{{ route('route_BackEnd_Product_index') }}" class="btn btn-default">Cancel</a>
             </div>
             <!-- /.box-footer -->
         </form>

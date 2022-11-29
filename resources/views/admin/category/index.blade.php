@@ -160,8 +160,15 @@
                             <tr>
                                 {{--                                <td><input type="checkbox" name="chk_hv[]" class="chk_hv" id="chk_hv_{{$item->id}}" value="{{$item->id}}"> </td>--}}
                                 <td class="text-center">{{$item->id}}</td>
-                                <td class="text-center"><a style="color:#333333;font-weight: bold;" href="" style="white-space:unset;text-align: justify;">{{$item->category_name}}<i class="fa fa-edit"></i></a></td>
-                                <td class="text-center">{{$item->status}}</td>
+                                <td class="text-center"><a style="color:#333333;font-weight: bold;" href="{{route('route_BackEnd_Category_detail',['id'=>$item->id])}}" style="white-space:unset;text-align: justify;">{{$item->category_name}}<i class="fa fa-edit"></i></a></td>
+                                <td class="text-center"><?php
+                                                            if($item->status ==0){
+                                                                echo "Ẩn";
+                                                            }else{
+                                                                echo "Hiện";
+                                        }
+                                                        ?>
+                                </td>
                             </tr>
                         @endforeach
                     </table>

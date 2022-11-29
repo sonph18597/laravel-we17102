@@ -153,7 +153,7 @@
                             <th class="text-center">
                                 Email
                             </th>
-                            <th class="text-center">Anh</th>
+                            <th class="text-center">Ảnh</th>
                         </tr>
 
                         @foreach($list as $item)
