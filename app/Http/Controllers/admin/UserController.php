@@ -67,15 +67,16 @@ class UserController extends Controller
         }
 
         $modelNguoiDung = new Test();
-        $res = $modelNguoiDung->saveUpdate($params);
-        if ($res == null) {
-            return redirect()->route($method_route,['id'=>$id]);
-        } elseif ($res == 1) {
-            Session::flash('success','Cập nhât bản ghi'.$id."Thành công");
-            return redirect()->route($method_route,['id'=>$id]);
-        } else {
-            Session::flash('error','Lỗi cập nhât bản ghi'.$id);
-            return redirect()->route($method_route,['id'=>$id]);
+        $res= $modelNguoiDung->saveUpdate($params);
+        if ($res == null){
+            return  redirect()->route($method_route,['id'=>$id]);
+        }
+        elseif ($res == 1){
+            Session::flash('success',"Update thanh cong".$id);
+            return  redirect()->route($method_route,['id'=>$id]);
+        }else{
+            Session::flash('error',"Update that bai".$id);
+            return  redirect()->route($method_route,['id'=>$id]);
         }
     }
     public function uploadFile($file) {

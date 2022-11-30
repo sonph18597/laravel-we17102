@@ -34,4 +34,8 @@ class HomeController extends Controller
         $this->v['product'] = $product;
         return view('client.detail',$this->v);
     }
+
+    public function detail($id){
+        return view('client.detail');
+    }
 }

@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'home\HomeController@index')->name('home');
+
 Route::get('/home/product/detail/{id}','home\HomeController@detail')->name('route_FrontEnd_Product_detail');
+
 Route::get('/login',['as'=>'login','uses'=>'Auth\LoginController@getLogin']);
 Route::post('/login',['as'=>'login','uses'=>'Auth\LoginController@postLogin']);
 Route::get('/logout',['as'=>'logout','uses'=>'Auth\LoginController@getLogout']);
+
 
 Route::middleware(['auth'])->group(function (){
     // tất cả đường link muốn bảo vệ chỉ cần viết vào đây
