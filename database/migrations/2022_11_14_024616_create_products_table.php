@@ -18,10 +18,11 @@ return new class extends Migration
             $table->integer("category_id");
             $table->string("product_name");
             $table->integer("price");
+            $table->string("image")->nullable();
             $table->string("color")->nullable();
             $table->string("size")->nullable();
-            $table->integer("status");
-            $table->integer("view");
+            $table->integer("status")->default(1);
+            $table->integer("view")->default(1);
             $table->timestamps();
         });
     }

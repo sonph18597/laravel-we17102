@@ -212,6 +212,13 @@
                                     class="fa fa-circle-o"></i> Thêm danh mục</a></li>
                     </ul>
                 </li>
+                <li class=" active menu-open ">
+                    <a href="/product"><i class="fa fa-clipboard"></i> <span>Sản phẩm</span></a>
+                    <ul class="treeview-menu">
+                        <li><a href="/product/add"><i
+                                    class="fa fa-circle-o"></i> Thêm sản phẩm</a></li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->

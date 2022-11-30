@@ -67,48 +67,30 @@
                     <span class="sr-only">Close</span>
                 </button>
             </div>
-    @endif
+        @endif
 
-    <!-- Phần nội dung riêng của action  -->
+        <!-- Phần nội dung riêng của action  -->
         <form class="form-horizontal " action="" method="post" enctype="multipart/form-data">
             @csrf
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="ten_de_thi" class="col-md-3 col-sm-4 control-label">Tên người dùng <span class="text-danger">(*)</span></label>
+                            <label for="ten_de_thi" class="col-md-3 col-sm-4 control-label">Tên Danh Mục<span class="text-danger">(*)</span></label>
 
                             <div class="col-md-9 col-sm-8">
-                                <input type="text" name="name" id="name" class="form-control" value="@isset($request['name']){{ $request['name'] }}@endisset">
+                                <input type="text" name="category_name" id="category_name" class="form-control" value="@isset($request['category_name']){{ $request['category_name'] }}@endisset">
                                 <span id="mes_sdt"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-md-3 col-sm-4 control-label">Email <span class="text-danger">(*)</span></label>
+                            <label for="ten_de_thi" class="col-md-3 col-sm-4 control-label">Status<span class="text-danger">(*)</span></label>
+
                             <div class="col-md-9 col-sm-8">
-                                <input type="text" name="email" id="email" class="form-control" value="@isset($request['email']){{ $request['email'] }}@endisset">
-                                <span id="mes_sdt"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-md-3 col-sm-4 control-label">Mật khẩu <span class="text-danger">(*)</span></label>
-                            <div class="col-md-9 col-sm-8">
-                                <input type="password" name="password" id="password" class="form-control" value="@isset($request['password']){{ $request['password'] }}@endisset">
-                                <span id="mes_sdt"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-3 col-sm-4 control-label">Ảnh CMND/CCCD</label>
-                            <div class="col-md-9 col-sm-8">
-                                <div class="row">
-                                    <div class="col-xs-6">
-                                        <img id="mat_truoc_preview" src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" alt="your image"
-                                             style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-fluid"/>
-                                        <input type="file" name="cmt_mat_truoc" accept="image/*"
-                                               class="form-control-file @error('cmt_mat_truoc') is-invalid @enderror" id="cmt_truoc">
-                                        <label for="cmt_truoc">Mặt trước</label><br/>
-                                    </div>
-                                </div>
+                            <select name="status" id="status" class="form-control input-sm m-bot10">
+                                <option value="0">Ẩn</option>
+                                <option value="1">Hiện</option>
+                            </select>
                             </div>
                         </div>
                     </div>
@@ -118,7 +100,7 @@
             <!-- /.box-body -->
             <div class="text-center">
                 <button type="submit" class="btn btn-primary"> Save</button>
-                <a href="{{ route('route_BackEnd_User_index') }}" class="btn btn-default">Cancel</a>
+                <a href="{{ route('route_BackEnd_Category_index') }}" class="btn btn-default">Cancel</a>
             </div>
             <!-- /.box-footer -->
         </form>
@@ -128,25 +110,7 @@
 @section('script')
     <script src="{{ asset('default/plugins/input-mask/jquery.inputmask.js') }}"></script>
     <script src="{{ asset('default/plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
-    <script>
-        $(function(){
-            function readURL(input, selector) {
-                if (input.files && input.files[0]) {
-                    let reader = new FileReader();
 
-                    reader.onload = function (e) {
-                        $(selector).attr('src', e.target.result);
-                    };
 
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-            $("#cmt_truoc").change(function () {
-                readURL(this, '#mat_truoc_preview');
-
-            });
-
-        });
-    </script>
 @endsection
 

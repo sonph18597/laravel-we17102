@@ -8,7 +8,7 @@ use App\Models\Test;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
-use function PHPUnit\Framework\isNull;
+
 
 class UserController extends Controller
 {
@@ -56,15 +56,16 @@ class UserController extends Controller
         $this->v['objItem']= $objItem;
         return view('admin.user.detail', $this->v);
     }
-    public function update($id, Request $request){
+    public function update($id, TestRequest $request) {
         $method_route = 'route_BackEnd_User_detail';
-        $params =[];
-        $params['cols']= $request ->post();
-        unset($params['cols']['_token']);
-        $params['cols']['id']=$id;
-        if(isNull($params['cols']['password'])){
-            $params['cols']['password'] = Hash::make($request->password);
+        $params = [];
+        $params['cols'] = $request->post();
+        unset( $params['cols']['_token']);
+        $params['cols']['id'] = $id;
+        if (!is_null( $params['cols']['password'])) {
+            $params['cols']['password'] = Hash::make($params['cols']['id']);
         }
+
         $modelNguoiDung = new Test();
         $res= $modelNguoiDung->saveUpdate($params);
         if ($res == null){

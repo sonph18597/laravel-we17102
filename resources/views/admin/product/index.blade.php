@@ -83,7 +83,7 @@
                             </button>
                             <a href="{{ url('/user') }}" class="btn btn-default btn-sm "><i class="fa fa-remove"></i>
                                 Clear </a>
-                            <a href="" class="btn btn-info btn-sm"><i class="fa fa-user-plus" style="color:white;"></i>
+                            <a href="/product/add" class="btn btn-info btn-sm"><i class="fa fa-user-plus" style="color:white;"></i>
                                 Add new</a>
                         </div>
                     </div>
@@ -149,20 +149,43 @@
                             <th style="width: 50px" class="text-center">
                                 #ID
                             </th>
-                            <th class="text-center">Danh Muc</th>
+                            <th class="text-center">Tên Sản Phẩm</th>
                             <th class="text-center">
-                                Status
+                                Giá
                             </th>
-                            {{--                            <th class="text-center">Trạng thái</th>--}}
+                            <th class="text-center">Ảnh</th>
+                            <th class="text-center">Màu</th>
+                            <th class="text-center">Size</th>
+                            <th class="text-center">Status</th>
+                            <th class="text-center">View</th>
+                            <th class="text-center">Category_ID</th>
+
                         </tr>
 
                         @foreach($list as $item)
-                            <tr>
-                                {{--                                <td><input type="checkbox" name="chk_hv[]" class="chk_hv" id="chk_hv_{{$item->id}}" value="{{$item->id}}"> </td>--}}
-                                <td class="text-center">{{$item->id}}</td>
-                                <td class="text-center"><a style="color:#333333;font-weight: bold;" href="" style="white-space:unset;text-align: justify;">{{$item->category_name}}<i class="fa fa-edit"></i></a></td>
-                                <td class="text-center">{{$item->status}}</td>
-                            </tr>
+                        <tr>
+                            {{--                                <td><input type="checkbox" name="chk_hv[]" class="chk_hv" id="chk_hv_{{$item->id}}" value="{{$item->id}}"> </td>--}}
+                            <td class="text-center">{{$item->id}}</td>
+                            <td class="text-center"><a style="color:#333333;font-weight: bold;" href="{{route('route_BackEnd_Product_detail',['id'=>$item->id])}}" style="white-space:unset;text-align: justify;">{{$item->product_name}}<i class="fa fa-edit"></i></a></td>
+                            <td class="text-center">{{$item->price}}</td>
+                            <td class="text-center"><img id="mat_truoc_preview"
+                                                         src="{{ $item->image?''.Storage::url($item->image):'http://placehold.it/100x100' }}"
+                                                         alt="your image"
+                                                         style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/>
+                            </td>
+                            <td class="text-center">{{$item->color}}</td>
+                            <td class="text-center">{{$item->size}}</td>
+                            <td class="text-center">
+                                @if($item->status ==0)
+                                Ẩn
+                                @else
+                                Hiện
+                                @endif
+                            </td>
+                            <td class="text-center">{{$item->view}}</td>
+                            <td class="text-center">{{$item->category_id}}</td>
+
+                        </tr>
                         @endforeach
                     </table>
                 </div>
