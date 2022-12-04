@@ -2,14 +2,30 @@
 
 namespace App\Http\Controllers\home;
 
+use App\Cart;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
     //
+    public $product;
+    public $quantity;
+
+    /**
+     * Mounts the component on the template.
+     *
+     * @return void
+     */
+    public function mount(): void
+    {
+        $this->quantity = 1;
+    }
     private $v;
     public  function  __construct()
     {
@@ -22,20 +38,35 @@ class HomeController extends Controller
         return view('client.home',$this->v);
     }
     public function getProduct(){
-        $product = Product::all();
-        return $product;
+        $productList = Product::all();
+        return $productList;
     }
     public function getCategory(){
         $getCategory = Category::all();
         return $getCategory;
     }
     public function detail($id){
-        $product = Product::find($id);
-        $this->v['product'] = $product;
+        $productOne = DB::table('products')->where('id',$id)->first();
+        $this->v['product'] = $productOne;
         return view('client.detail',$this->v);
     }
+   public function cart(){
+    $session = new Session;
+    return view('client.cart');
+   }
 
-    public function detail($id){
-        return view('client.detail');
+   public function addToCart(Request $request,$id)
+    {
+        $product = DB::table('products')->where('id',$id)->first();
+        if($product != null){
+            $oldCart = Session('cart') ? Session('cart') : null;
+            $newCart = new Cart($oldCart);
+            $newCart->Addcart($product,$id);
+            $request->session()->put('Cart',$newCart);
+            $this->v['newCart']= $newCart;
+        }
+        
+        return view('client.cart',$this->v);
     }
+
 }

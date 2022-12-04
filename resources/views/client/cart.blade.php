@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:20 GMT -->
+<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/shoping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:41 GMT -->
 <head>
     <meta charset="utf-8" />
     <meta name="author" content="Themezhub" />
@@ -29,8 +29,67 @@
     <!-- ============================================================== -->
     <!-- Top header  -->
     <!-- ============================================================== -->
+    <div class="py-2 bg-dark">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 hide-ipad">
+                    <div class="top_first"><a href="callto:(+84)0123456789" class="medium text-light">(+84) 0123 456 789</a></div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 hide-ipad">
+                    <div class="top_second text-center"><p class="medium text-light m-0 p-0">Get Free delivery from $2000 <a href="#" class="medium text-light text-underline">Shop Now</a></p></div>
+                </div>
+
+                <!-- Right Menu -->
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
+
+                    <div class="currency-selector dropdown js-dropdown float-right">
+                        <a href="javascript:void(0);" data-toggle="dropdown" class="popup-title"  title="Currency" aria-label="Currency dropdown">
+                            <span class="hidden-xl-down medium text-light">Currency:</span>
+                            <span class="iso_code medium text-light">$USD</span>
+                            <i class="fa fa-angle-down medium text-light"></i>
+                        </a>
+                        <ul class="popup-content dropdown-menu">
+                            <li><a title="Euro" href="#" class="dropdown-item medium text-medium">EUR €</a></li>
+                            <li class="current"><a title="US Dollar" href="#" class="dropdown-item medium text-medium">USD $</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Choose Language -->
+
+                    <div class="language-selector-wrapper dropdown js-dropdown float-right mr-3">
+                        <a class="popup-title" href="javascript:void(0)" data-toggle="dropdown" title="Language" aria-label="Language dropdown">
+                            <span class="hidden-xl-down medium text-light">Language:</span>
+                            <span class="iso_code medium text-light">English</span>
+                            <i class="fa fa-angle-down medium text-light"></i>
+                        </a>
+                        <ul class="dropdown-menu popup-content link">
+                            <li class="current"><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/1.jpg" alt="en" width="16" height="11" /><span>English</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/2.jpg" alt="fr" width="16" height="11" /><span>Français</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/3.jpg" alt="de" width="16" height="11" /><span>Deutsch</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/4.jpg" alt="it" width="16" height="11" /><span>Italiano</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/5.jpg" alt="es" width="16" height="11" /><span>Español</span></a></li>
+                            <li ><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/6.jpg" alt="ar" width="16" height="11" /><span>اللغة العربية</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="currency-selector dropdown js-dropdown float-right mr-3">
+                        <a href="javascript:void(0);" class="text-light medium">Wishlist</a>
+                    </div>
+
+                    <div class="currency-selector dropdown js-dropdown float-right mr-3">
+                        <a href="javascript:void(0);" class="text-light medium">My Account</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Start Navigation -->
-    <div class="header header-transparent dark-text">
+    <div class="header header-light dark-text">
         <div class="container">
             <nav id="navigation" class="navigation navigation-landscape">
                 <div class="nav-header">
@@ -66,8 +125,19 @@
                 <div class="nav-menus-wrapper" style="transition-property: none;">
                     <ul class="nav-menu">
 
-                        <li><a href="{{route('home')}}">Home</a>
-
+                        <li><a href="#">Home</a>
+                            <ul class="nav-dropdown nav-submenu">
+                                <li><a href="index.html">Home 1</a></li>
+                                <li><a href="home-2.html">Home 2</a></li>
+                                <li><a href="home-3.html">Home 3</a></li>
+                                <li><a href="home-4.html">Home 4</a></li>
+                                <li><a href="home-5.html">Home 5</a></li>
+                                <li><a href="home-6.html">Home 6</a></li>
+                                <li><a href="home-7.html">Home 7</a></li>
+                                <li><a href="home-8.html">Home 8</a></li>
+                                <li><a href="home-9.html">Home 9</a></li>
+                                <li><a href="home-10.html">Home 10</a></li>
+                            </ul>
                         </li>
 
                         <li><a href="javascript:void(0);">Shop</a>
@@ -153,403 +223,190 @@
     <!-- Top header  -->
     <!-- ============================================================== -->
 
-    <!-- ============================ Hero Banner  Start================================== -->
-    <div class="home-slider margin-bottom-0">
-        <!-- Slide -->
-        <div data-background-image="../../client/img/banner-2.png" class="item">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="home-slider-container">
-
-                            <!-- Slide Title -->
-                            <div class="home-slider-desc">
-                                <div class="home-slider-title mb-4">
-                                    <h5 class="theme-cl fs-sm ft-ragular mb-0">Winter Collection</h5>
-                                    <h1 class="mb-1 ft-bold lg-heading">New Winter<br>Collections 2021</h1>
-                                    <span class="trending">There's nothing like trend</span>
-                                </div>
-
-                                <a href="#" class="btn stretched-link borders">Shop Now<i class="lni lni-arrow-right ml-2"></i></a>
-                            </div>
-                            <!-- Slide Title / End -->
-
-                        </div>
-                    </div>
+    <!-- ======================= Top Breadcrubms ======================== -->
+    <div class="gray py-3">
+        <div class="container">
+            <div class="row">
+                <div class="colxl-12 col-lg-12 col-md-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Support</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
-
-        <!-- Slide -->
-        <div data-background-image="../../client/img/banner-5.png" class="item">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="home-slider-container">
-
-                            <!-- Slide Title -->
-                            <div class="home-slider-desc">
-                                <div class="home-slider-title mb-4">
-                                    <h5 class="theme-cl fs-sm ft-ragular mb-0">Winter Collection</h5>
-                                    <h1 class="mb-1 ft-bold lg-heading">New Winter<br>Collections 2021</h1>
-                                    <span class="trending">There's nothing like trend</span>
-                                </div>
-
-                                <a href="#" class="btn stretched-link borders">Shop Now<i class="lni lni-arrow-right ml-2"></i></a>
-                            </div>
-                            <!-- Slide Title / End -->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide -->
-        <div data-background-image="../../client/img/banner-3.png" class="item">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="home-slider-container">
-
-                            <!-- Slide Title -->
-                            <div class="home-slider-desc">
-                                <div class="home-slider-title mb-4">
-                                    <h5 class="theme-cl fs-sm ft-ragular mb-0">Winter Collection</h5>
-                                    <h1 class="mb-1 ft-bold lg-heading">New Winter<br>Collections 2021</h1>
-                                    <span class="trending">There's nothing like trend</span>
-                                </div>
-
-                                <a href="#" class="btn stretched-link borders">Shop Now<i class="lni lni-arrow-right ml-2"></i></a>
-                            </div>
-                            <!-- Slide Title / End -->
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <!-- ============================ Hero Banner End ================================== -->
+    <!-- ======================= Top Breadcrubms ======================== -->
 
-    <!-- ========================= Category Style ========================== -->
+    <!-- ======================= Product Detail ======================== -->
     <section class="middle">
         <div class="container">
-            <div class="row no-gutters exlio_gutters">
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    <div class="single_cats">
-                        <a href="#" class="cards card-overflow card-scale lg_height">
-                            <div class="bg-image" style="background:url(../../client/img/b-8.png)no-repeat;"></div>
-                            <div class="ct_body">
-                                <div class="ct_body_caption left">
-                                    <h2 class="m-0 ft-bold lh-1 fs-md text-upper">Women Clothes</h2>
-                                    <span>3272 Items</span>
-                                </div>
-                                <div class="ct_footer left">
-                                    <span class="stretched-link fs-md">Browse Items <i class="ti-arrow-circle-right"></i></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="single_cats">
-                        <a href="#" class="cards card-overflow card-scale md_height">
-                            <div class="bg-image" style="background:url(../../client/img/b-5.png)no-repeat;"></div>
-                            <div class="ct_body">
-                                <div class="ct_body_caption left">
-                                    <h2 class="m-0 ft-bold lh-1 fs-md text-upper">Men's Wear</h2>
-                                    <span>7632 Items</span>
-                                </div>
-                                <div class="ct_footer left">
-                                    <span class="stretched-link fs-md">Browse Items <i class="ti-arrow-circle-right"></i></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    <!-- row -->
-                    <div class="row no-gutters">
-
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <div class="single_cats">
-                                <a href="#" class="cards card-overflow card-scale md_height">
-                                    <div class="bg-image" style="background:url(../../client/img/b-3.png)no-repeat;"></div>
-                                    <div class="ct_body">
-                                        <div class="ct_body_caption left">
-                                            <h2 class="m-0 ft-bold lh-1 fs-md text-upper">Kid's Wear</h2>
-                                            <span>4072 Items</span>
-                                        </div>
-                                        <div class="ct_footer left">
-                                            <span class="stretched-link fs-md">Browse Items <i class="ti-arrow-circle-right"></i></span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="single_cats">
-                                <a href="#" class="cards card-overflow card-scale lg_height">
-                                    <div class="bg-image" style="background:url(../../client/img/b-7.png)no-repeat;"></div>
-                                    <div class="ct_body">
-                                        <div class="ct_body_caption left">
-                                            <h2 class="m-0 ft-bold lh-1 fs-md text-upper">Men's Jackets</h2>
-                                            <span>9652 Items</span>
-                                        </div>
-                                        <div class="ct_footer left">
-                                            <span class="stretched-link fs-md">Browse Items <i class="ti-arrow-circle-right"></i></span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- /row -->
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ============================ Category Style =============================== -->
-
-    <!-- ======================= Products Lists ======================== -->
-    @yield('home-product')
-    <!-- ======================= Products List ======================== -->
-
-    <!-- ======================= Customer Review ======================== -->
-    <section class="gray">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="sec_title position-relative text-center">
-                        <h2 class="off_title">Testimonials</h2>
-                        <h3 class="ft-bold pt-3">Client Reviews</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12">
-                    <div class="reviews-slide px-3">
-
-                        <!-- single review -->
-                        <div class="single_review">
-                            <div class="sng_rev_thumb"><figure><img src="../../client/img/team-1.jpg" class="img-fluid circle" alt="" /></figure></div>
-                            <div class="sng_rev_caption text-center">
-                                <div class="rev_desc mb-4">
-                                    <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                                </div>
-                                <div class="rev_author">
-                                    <h4 class="mb-0">Mark Jevenue</h4>
-                                    <span class="fs-sm">CEO of Addle</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- single review -->
-                        <div class="single_review">
-                            <div class="sng_rev_thumb"><figure><img src="../../client/img/team-2.jpg" class="img-fluid circle" alt="" /></figure></div>
-                            <div class="sng_rev_caption text-center">
-                                <div class="rev_desc mb-4">
-                                    <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                                </div>
-                                <div class="rev_author">
-                                    <h4 class="mb-0">Henna Bajaj</h4>
-                                    <span class="fs-sm">Aqua Founder</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- single review -->
-                        <div class="single_review">
-                            <div class="sng_rev_thumb"><figure><img src="../../client/img/team-3.jpg" class="img-fluid circle" alt="" /></figure></div>
-                            <div class="sng_rev_caption text-center">
-                                <div class="rev_desc mb-4">
-                                    <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                                </div>
-                                <div class="rev_author">
-                                    <h4 class="mb-0">John Cenna</h4>
-                                    <span class="fs-sm">CEO of Plike</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- single review -->
-                        <div class="single_review">
-                            <div class="sng_rev_thumb"><figure><img src="../../client/img/team-4.jpg" class="img-fluid circle" alt="" /></figure></div>
-                            <div class="sng_rev_caption text-center">
-                                <div class="rev_desc mb-4">
-                                    <p class="fs-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-                                </div>
-                                <div class="rev_author">
-                                    <h4 class="mb-0">Madhu Sharma</h4>
-                                    <span class="fs-sm">Team Manager</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ======================= Customer Review ======================== -->
-
-    <!-- ======================= Blog Start ============================ -->
-    <section class="space min">
-        <div class="container">
-
-            <div class="row justify-content-center">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="sec_title position-relative text-center">
-                        <h2 class="off_title">Latest News</h2>
-                        <h3 class="ft-bold pt-3">New Updates</h3>
-                    </div>
-                </div>
-            </div>
 
             <div class="row">
-
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <div class="_blog_wrap">
-                        <div class="_blog_thumb mb-2">
-                            <a href="blog-detail.html" class="d-block"><img src="../../client/img/bl-1.png" class="img-fluid rounded" alt="" /></a>
-                        </div>
-                        <div class="_blog_caption">
-                            <span class="text-muted">26 Jan 2021</span>
-                            <h5 class="bl_title lh-1"><a href="blog-detail.html">Let's start bring sale on this saummer vacation.</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-                            <a href="blog-detail.html" class="text-dark fs-sm">Continue Reading..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <div class="_blog_wrap">
-                        <div class="_blog_thumb mb-2">
-                            <a href="blog-detail.html" class="d-block"><img src="../../client/img/bl-2.png" class="img-fluid rounded" alt="" /></a>
-                        </div>
-                        <div class="_blog_caption">
-                            <span class="text-muted">17 July 2021</span>
-                            <h5 class="bl_title lh-1"><a href="blog-detail.html">Let's start bring sale on this saummer vacation.</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-                            <a href="blog-detail.html" class="text-dark fs-sm">Continue Reading..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                    <div class="_blog_wrap">
-                        <div class="_blog_thumb mb-2">
-                            <a href="blog-detail.html" class="d-block"><img src="../../client/img/bl-3.png" class="img-fluid rounded" alt="" /></a>
-                        </div>
-                        <div class="_blog_caption">
-                            <span class="text-muted">10 Aug 2021</span>
-                            <h5 class="bl_title lh-1"><a href="blog-detail.html">Let's start bring sale on this saummer vacation.</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-                            <a href="blog-detail.html" class="text-dark fs-sm">Continue Reading..</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- ======================= Blog Start ============================ -->
-
-    <!-- ======================= Instagram Start ============================ -->
-    <section class="p-0">
-        <div class="container-fluid p-0">
-
-            <div class="row no-gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                    <div class="sec_title position-relative text-center">
-                        <h2 class="off_title">Instagram Gallery</h2>
-                        <span class="fs-lg ft-bold theme-cl pt-3">@mahak_71</span>
-                        <h3 class="ft-bold lh-1">From Instagram</h3>
+                    <div class="text-center d-block mb-5">
+                        <h2>Shopping Cart</h2>
                     </div>
                 </div>
             </div>
 
-            <div class="row no-gutters">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-7 col-md-12">
+                    <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x mb-4">
+                        @foreach ($newCart->products as $item )
+                      
+                        <li class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <!-- Image -->
+                                    <a href="product.html"><img src="{{ $item->image ? '' . Storage::url($item->image) : 'http://placehold.it/100x100'}}" alt="..." class="img-fluid"></a>
+                                </div>
+                                <div class="col d-flex align-items-center justify-content-between">
+                                    <div class="cart_single_caption pl-2">
+                                        <h4 class="product_title fs-md ft-medium mb-1 lh-1">{{$item['productInfo']->product_name}}</h4>
+                                        <p class="mb-1 lh-1"><span class="text-dark">Size: {{$item['productInfo']->size}}</span></p>
+                                        <p class="mb-3 lh-1"><span class="text-dark">Color: {{$item['productInfo']->color}}</span></p>
+                                        <h4 class="fs-md ft-medium mb-3 lh-1">{{$item['productInfo']->price}}</h4>
+                                        <select class="mb-2 custom-select w-auto">
+                                            <option value="1" selected="">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
+                                </div>
+                            </div>
+                        </li>
+                        @endforeach
 
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-1.png" class="img-fluid" alt="" /></a>
+                    </ul>
+
+                    <div class="row align-items-end justify-content-between mb-10 mb-md-0">
+                        <div class="col-12 col-md-7">
+                            <!-- Coupon -->
+                            <form class="mb-7 mb-md-0">
+                                <label class="fs-sm ft-medium text-dark">Coupon code:</label>
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <input class="form-control" type="text" placeholder="Enter coupon code*">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-dark" type="submit">Apply</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-auto mfliud">
+                            <button class="btn stretched-link borders">Update Cart</button>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-2.png" class="img-fluid" alt="" /></a>
+
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card mb-4 gray mfliud">
+                        <div class="card-body">
+                            <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
+                                <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                                    <span>Subtotal</span> <span class="ml-auto text-dark ft-medium">$98.12</span>
+                                </li>
+                                <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                                    <span>Tax</span> <span class="ml-auto text-dark ft-medium">$10.10</span>
+                                </li>
+                                <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                                    <span>Total</span> <span class="ml-auto text-dark ft-medium">$108.22</span>
+                                </li>
+                                <li class="list-group-item fs-sm text-center">
+                                    Shipping cost calculated at Checkout *
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-3.png" class="img-fluid" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-7.png" class="img-fluid" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-8.png" class="img-fluid" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-4.png" class="img-fluid" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-5.png" class="img-fluid" alt="" /></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="_insta_wrap">
-                        <div class="_insta_thumb">
-                            <a href="javascript:void(0);" class="d-block"><img src="../../client/img/i-6.png" class="img-fluid" alt="" /></a>
-                        </div>
-                    </div>
+
+                    <a class="btn btn-block btn-dark mb-3" href="checkout.html">Proceed to Checkout</a>
+
+                    <a class="btn-link text-dark ft-medium" href="shop.html">
+                        <i class="ti-back-left mr-2"></i> Continue Shopping
+                    </a>
                 </div>
 
             </div>
 
         </div>
     </section>
-    <!-- ======================= Instagram Start ============================ -->
+    <!-- ======================= Product Detail End ======================== -->
+
+    <!-- ============================= Customer Features =============================== -->
+    <section class="px-0 py-3 br-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="fas fa-shopping-basket theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">Free Shipping</h5>
+                            <span class="text-muted">Capped at $10 per order</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="far fa-credit-card theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">Secure Payments</h5>
+                            <span class="text-muted">Up to 6 months installments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="fas fa-shield-alt theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">15-Days Returns</h5>
+                            <span class="text-muted">Shop with fully confidence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="fas fa-headphones-alt theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">24x7 Fully Support</h5>
+                            <span class="text-muted">Get friendly support</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ======================= Customer Features ======================== -->
 
     <!-- ============================ Footer Start ================================== -->
-    <footer class="light-footer">
+    <footer class="dark-footer skin-dark-footer style-2">
         <div class="footer-middle">
             <div class="container">
                 <div class="row">
 
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                         <div class="footer_widget">
-                            <img src="../../client/img/logo.png" class="img-footer small mb-2" alt="" />
+                            <img src="../../client/img/logo-light.png" class="img-footer small mb-2" alt="" />
 
                             <div class="address mt-3">
                                 3298 Grant Street Longview, TX<br>United Kingdom 75601
@@ -616,12 +473,12 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Email Address">
                                     <div class="input-group-append">
-                                        <button type="button" class="input-group-text bg-dark b-0 text-light"><i class="lni lni-arrow-right"></i></button>
+                                        <button type="button" class="input-group-text b-0 text-light"><i class="lni lni-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <div class="address mt-3">
-                                <h5 class="fs-sm">Secure Payments</h5>
+                                <h5 class="fs-sm text-light">Secure Payments</h5>
                                 <div class="scr_payment"><img src="../../client/img/card.png" class="img-fluid" alt="" /></div>
                             </div>
                         </div>
@@ -1034,7 +891,35 @@
                     </div>
 
                     <!-- Single Item -->
+                    <div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
+                        <div class="cart_single d-flex align-items-center">
+                            <div class="cart_selected_single_thumb">
+                                <a href="#"><img src="../../client/img/product/7.jpg" width="60" class="img-fluid" alt="" /></a>
+                            </div>
+                            <div class="cart_single_caption pl-2">
+                                <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Floral Print Jumpsuit</h4>
+                                <p class="mb-2"><span class="text-dark ft-medium small">36</span>, <span class="text-dark small">Red</span></p>
+                                <h4 class="fs-md ft-medium mb-0 lh-1">$129</h4>
+                            </div>
+                        </div>
+                        <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
+                    </div>
+
                     <!-- Single Item -->
+                    <div class="d-flex align-items-center justify-content-between px-3 py-3">
+                        <div class="cart_single d-flex align-items-center">
+                            <div class="cart_selected_single_thumb">
+                                <a href="#"><img src="../../client/img/product/8.jpg" width="60" class="img-fluid" alt="" /></a>
+                            </div>
+                            <div class="cart_single_caption pl-2">
+                                <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Solid A-Line Dress</h4>
+                                <p class="mb-2"><span class="text-dark ft-medium small">30</span>, <span class="text-dark small">Blue</span></p>
+                                <h4 class="fs-md ft-medium mb-0 lh-1">$100</h4>
+                            </div>
+                        </div>
+                        <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
+                    </div>
+
                 </div>
 
                 <div class="d-flex align-items-center justify-content-between br-top br-bottom px-3 py-3">
@@ -1110,5 +995,5 @@
 
 </body>
 
-<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:23 GMT -->
+<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/shoping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:42 GMT -->
 </html>
