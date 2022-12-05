@@ -36,7 +36,7 @@
                                         <div class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">Sale</div>
                                         <div class="card-body p-0">
                                             <div class="shop_thumb position-relative">
-                                                <a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img class="card-img-top" src="{{$item->image?''.Storage::url($item->image):'http://placehold.it/100x100'}}" alt="..."></a>
+                                                <a class="card-img-top d-block overflow-hidden" href="{{route('route_FrontEnd_Product_detail',['id'=>$item->id])}}"><img class="card-img-top" src="{{$item->image?''.Storage::url($item->image):'http://placehold.it/100x100'}}" alt="..." height="300px" ></a>
                                                 <div class="product-hover-overlay d-flex align-items-center justify-content-between">
                                                     <div class="edlio"><a href="javascript:void(0);" class="text-underline fs-sm ft-bold snackbar-addcart">Add To Cart</a></div>
                                                     <div class="edlio d-flex align-items-center">

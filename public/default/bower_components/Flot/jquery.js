@@ -9424,7 +9424,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 					// As of 5/8/2012 this will yield incorrect results for Mobile Safari, but there
 					// isn't a whole lot we can do. See pull request at this URL for discussion:
 					// https://github.com/jquery/jquery/pull/764
-					return elem.document.documentElement[ "client" + name ];
+					return elem.document.documentElement[ "clients" + name ];
 				}
 
 				// Get document width or height
@@ -9436,7 +9436,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 					return Math.max(
 						elem.body[ "scroll" + name ], doc[ "scroll" + name ],
 						elem.body[ "offset" + name ], doc[ "offset" + name ],
-						doc[ "client" + name ]
+						doc[ "clients" + name ]
 					);
 				}
 
