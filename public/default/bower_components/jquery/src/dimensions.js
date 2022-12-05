@@ -25,7 +25,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 					// $( window ).outerWidth/Height return w/h including scrollbars (gh-1729)
 					return funcName.indexOf( "outer" ) === 0 ?
 						elem[ "inner" + name ] :
-						elem.document.documentElement[ "client" + name ];
+						elem.document.documentElement[ "clients" + name ];
 				}
 
 				// Get document width or height
@@ -37,7 +37,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 					return Math.max(
 						elem.body[ "scroll" + name ], doc[ "scroll" + name ],
 						elem.body[ "offset" + name ], doc[ "offset" + name ],
-						doc[ "client" + name ]
+						doc[ "clients" + name ]
 					);
 				}
 

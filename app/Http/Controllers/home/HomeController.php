@@ -45,9 +45,13 @@ class HomeController extends Controller
         $getCategory = Category::all();
         return $getCategory;
     }
-    public function detail($id){
-        $productOne = DB::table('products')->where('id',$id)->first();
-        $this->v['product'] = $productOne;
+
+    public function product_detail($id, Request $request){
+        $listProduct = $this->getProduct();
+        $this->v['listProduct']=$listProduct;
+        $modelctSanPham = new Product();
+        $objItem = $modelctSanPham->loadOne($id);
+        $this->v['objItem']= $objItem;
         return view('client.detail',$this->v);
     }
    public function cart(){

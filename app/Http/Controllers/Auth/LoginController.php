@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -46,5 +47,9 @@ class loginController extends Controller
     public function getLogout(){
         Auth::logout();
         return redirect('login');
+    }
+    public function user(){
+       $user =DB::table('users')->get();
+        return response()->json($user);
     }
 }
