@@ -143,6 +143,7 @@
             }
             $("#cmt_truoc").change(function () {
                 readURL(this, '#mat_truoc_preview');
+
             });
 
         });

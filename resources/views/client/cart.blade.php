@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/shop-single-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:45 GMT -->
+<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/shoping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:41 GMT -->
 <head>
     <meta charset="utf-8" />
     <meta name="author" content="Themezhub" />
@@ -11,7 +10,7 @@
     <title>Kumo- Fashion eCommerce HTML Template</title>
 
     <!-- Custom CSS -->
-    <link href="{{asset("client/css/styles.css")}}" rel="stylesheet">
+    <link href="../../client/css/styles.css" rel="stylesheet">
 
 </head>
 
@@ -30,13 +29,72 @@
     <!-- ============================================================== -->
     <!-- Top header  -->
     <!-- ============================================================== -->
+    <div class="py-2 bg-dark">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 hide-ipad">
+                    <div class="top_first"><a href="callto:(+84)0123456789" class="medium text-light">(+84) 0123 456 789</a></div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 hide-ipad">
+                    <div class="top_second text-center"><p class="medium text-light m-0 p-0">Get Free delivery from $2000 <a href="#" class="medium text-light text-underline">Shop Now</a></p></div>
+                </div>
+
+                <!-- Right Menu -->
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
+
+                    <div class="currency-selector dropdown js-dropdown float-right">
+                        <a href="javascript:void(0);" data-toggle="dropdown" class="popup-title"  title="Currency" aria-label="Currency dropdown">
+                            <span class="hidden-xl-down medium text-light">Currency:</span>
+                            <span class="iso_code medium text-light">$USD</span>
+                            <i class="fa fa-angle-down medium text-light"></i>
+                        </a>
+                        <ul class="popup-content dropdown-menu">
+                            <li><a title="Euro" href="#" class="dropdown-item medium text-medium">EUR €</a></li>
+                            <li class="current"><a title="US Dollar" href="#" class="dropdown-item medium text-medium">USD $</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Choose Language -->
+
+                    <div class="language-selector-wrapper dropdown js-dropdown float-right mr-3">
+                        <a class="popup-title" href="javascript:void(0)" data-toggle="dropdown" title="Language" aria-label="Language dropdown">
+                            <span class="hidden-xl-down medium text-light">Language:</span>
+                            <span class="iso_code medium text-light">English</span>
+                            <i class="fa fa-angle-down medium text-light"></i>
+                        </a>
+                        <ul class="dropdown-menu popup-content link">
+                            <li class="current"><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/1.jpg" alt="en" width="16" height="11" /><span>English</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/2.jpg" alt="fr" width="16" height="11" /><span>Français</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/3.jpg" alt="de" width="16" height="11" /><span>Deutsch</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/4.jpg" alt="it" width="16" height="11" /><span>Italiano</span></a></li>
+                            <li><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/5.jpg" alt="es" width="16" height="11" /><span>Español</span></a></li>
+                            <li ><a href="javascript:void(0);" class="dropdown-item medium text-medium"><img src="../../client/img/6.jpg" alt="ar" width="16" height="11" /><span>اللغة العربية</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="currency-selector dropdown js-dropdown float-right mr-3">
+                        <a href="javascript:void(0);" class="text-light medium">Wishlist</a>
+                    </div>
+
+                    <div class="currency-selector dropdown js-dropdown float-right mr-3">
+                        <a href="javascript:void(0);" class="text-light medium">My Account</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Start Navigation -->
     <div class="header header-light dark-text">
         <div class="container">
             <nav id="navigation" class="navigation navigation-landscape">
                 <div class="nav-header">
                     <a class="nav-brand" href="#">
-                        <img src="{{asset("client/img/logo.png")}}" class="logo" alt="" />
+                        <img src="../../client/img/logo.png" class="logo" alt="" />
                     </a>
                     <div class="nav-toggle"></div>
                     <div class="mobile_nav">
@@ -69,8 +127,16 @@
 
                         <li><a href="#">Home</a>
                             <ul class="nav-dropdown nav-submenu">
-                                <li><a href="">Home 1</a></li>
-
+                                <li><a href="index.html">Home 1</a></li>
+                                <li><a href="home-2.html">Home 2</a></li>
+                                <li><a href="home-3.html">Home 3</a></li>
+                                <li><a href="home-4.html">Home 4</a></li>
+                                <li><a href="home-5.html">Home 5</a></li>
+                                <li><a href="home-6.html">Home 6</a></li>
+                                <li><a href="home-7.html">Home 7</a></li>
+                                <li><a href="home-8.html">Home 8</a></li>
+                                <li><a href="home-9.html">Home 9</a></li>
+                                <li><a href="home-10.html">Home 10</a></li>
                             </ul>
                         </li>
 
@@ -165,8 +231,8 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Library</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                            <li class="breadcrumb-item"><a href="#">Support</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
                         </ol>
                     </nav>
                 </div>
@@ -178,92 +244,159 @@
     <!-- ======================= Product Detail ======================== -->
     <section class="middle">
         <div class="container">
+
             <div class="row">
-
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-
-                    <img id="mat_truoc_preview"
-                         src="{{ $objItem->image?''.Storage::url($objItem->image):'http://placehold.it/100x100' }}"
-                         alt="your image"
-                         style="max-width: 300px; height:300px; margin-bottom: 10px;" class="img-responsive"/>
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="prd_details">
-
-                        <div class="prt_01 mb-2"><span class="text-success bg-light-success rounded px-2 py-1">Women's Suit</span></div>
-                        <div class="prt_02 mb-3">
-                            <h2 class="ft-bold mb-1">{{$objItem->product_name}}</h2>
-                            <div class="text-left">
-                                <div class="star-rating align-items-center d-flex justify-content-left mb-1 p-0">
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star filled"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span class="small">({{$objItem->view}} Reviews)</span>
-                                </div>
-                                <div class="elis_rty"><span class="ft-bold theme-cl fs-lg">${{$objItem->price}}</span></div>
-                            </div>
-                        </div>
-
-                        <div class="prt_03 mb-4">
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
-                        </div>
-                        <div class="prt_04 mb-4">
-                            <p class="d-flex align-items-center mb-1">Color:<strong class="fs-sm text-dark ft-medium ml-1">{{$objItem->color}}</strong></p>
-                        </div>
-
-                        <div class="prt_04 mb-4">
-                            <p class="d-flex align-items-center mb-1">Size:<strong class="fs-sm text-dark ft-medium ml-1">{{$objItem->size}}</strong></p>
-                        </div>
-                        <div class="prt_04 mb-4">
-                            <p class="d-flex align-items-center mb-1">Category:<a href="" class="fs-sm text-dark ft-medium ml-1"></a></p>
-                        </div>
-
-                        <div class="prt_05 mb-4">
-                            <div class="form-row mb-7">
-                                <div class="col-12 col-lg-auto">
-                                    <!-- Quantity -->
-                                    <select class="mb-2 custom-select">
-                                        <option value="1" selected="">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-lg">
-                                    <!-- Submit -->
-                                    <button type="submit" class="btn btn-block custom-height bg-dark mb-2">
-                                        <i class="lni lni-shopping-basket mr-2"></i>Add to Cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="prt_06">
-                            <p class="mb-0 d-flex align-items-center">
-                                <span class="mr-4">Share:</span>
-                                <a class="d-inline-flex align-items-center justify-content-center p-3 gray circle fs-sm text-muted mr-2" href="#!">
-                                    <i class="fab fa-twitter position-absolute"></i>
-                                </a>
-                                <a class="d-inline-flex align-items-center justify-content-center p-3 gray circle fs-sm text-muted mr-2" href="#!">
-                                    <i class="fab fa-facebook-f position-absolute"></i>
-                                </a>
-                                <a class="d-inline-flex align-items-center justify-content-center p-3 gray circle fs-sm text-muted" href="#!">
-                                    <i class="fab fa-pinterest-p position-absolute"></i>
-                                </a>
-                            </p>
-                        </div>
-
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="text-center d-block mb-5">
+                        <h2>Shopping Cart</h2>
                     </div>
                 </div>
             </div>
+
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-7 col-md-12">
+                    <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x mb-4">
+                        @foreach ($newCart->products as $item )
+                      
+                        <li class="list-group-item">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <!-- Image -->
+                                    <a href="product.html"><img src="{{ $item->image ? '' . Storage::url($item->image) : 'http://placehold.it/100x100'}}" alt="..." class="img-fluid"></a>
+                                </div>
+                                <div class="col d-flex align-items-center justify-content-between">
+                                    <div class="cart_single_caption pl-2">
+                                        <h4 class="product_title fs-md ft-medium mb-1 lh-1">{{$item['productInfo']->product_name}}</h4>
+                                        <p class="mb-1 lh-1"><span class="text-dark">Size: {{$item['productInfo']->size}}</span></p>
+                                        <p class="mb-3 lh-1"><span class="text-dark">Color: {{$item['productInfo']->color}}</span></p>
+                                        <h4 class="fs-md ft-medium mb-3 lh-1">{{$item['productInfo']->price}}</h4>
+                                        <select class="mb-2 custom-select w-auto">
+                                            <option value="1" selected="">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
+                                </div>
+                            </div>
+                        </li>
+                        @endforeach
+
+                    </ul>
+
+                    <div class="row align-items-end justify-content-between mb-10 mb-md-0">
+                        <div class="col-12 col-md-7">
+                            <!-- Coupon -->
+                            <form class="mb-7 mb-md-0">
+                                <label class="fs-sm ft-medium text-dark">Coupon code:</label>
+                                <div class="row form-row">
+                                    <div class="col">
+                                        <input class="form-control" type="text" placeholder="Enter coupon code*">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-dark" type="submit">Apply</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12 col-md-auto mfliud">
+                            <button class="btn stretched-link borders">Update Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card mb-4 gray mfliud">
+                        <div class="card-body">
+                            <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
+                                <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                                    <span>Subtotal</span> <span class="ml-auto text-dark ft-medium">$98.12</span>
+                                </li>
+                                <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                                    <span>Tax</span> <span class="ml-auto text-dark ft-medium">$10.10</span>
+                                </li>
+                                <li class="list-group-item d-flex text-dark fs-sm ft-regular">
+                                    <span>Total</span> <span class="ml-auto text-dark ft-medium">$108.22</span>
+                                </li>
+                                <li class="list-group-item fs-sm text-center">
+                                    Shipping cost calculated at Checkout *
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-block btn-dark mb-3" href="checkout.html">Proceed to Checkout</a>
+
+                    <a class="btn-link text-dark ft-medium" href="shop.html">
+                        <i class="ti-back-left mr-2"></i> Continue Shopping
+                    </a>
+                </div>
+
+            </div>
+
         </div>
     </section>
     <!-- ======================= Product Detail End ======================== -->
 
+    <!-- ============================= Customer Features =============================== -->
+    <section class="px-0 py-3 br-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="fas fa-shopping-basket theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">Free Shipping</h5>
+                            <span class="text-muted">Capped at $10 per order</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="far fa-credit-card theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">Secure Payments</h5>
+                            <span class="text-muted">Up to 6 months installments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="fas fa-shield-alt theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">15-Days Returns</h5>
+                            <span class="text-muted">Shop with fully confidence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-start py-2">
+                        <div class="d_ico">
+                            <i class="fas fa-headphones-alt theme-cl"></i>
+                        </div>
+                        <div class="d_capt">
+                            <h5 class="mb-0">24x7 Fully Support</h5>
+                            <span class="text-muted">Get friendly support</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ======================= Customer Features ======================== -->
 
     <!-- ============================ Footer Start ================================== -->
     <footer class="dark-footer skin-dark-footer style-2">
@@ -273,7 +406,7 @@
 
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                         <div class="footer_widget">
-                            <img src="{{asset("client/img/logo-light.png")}}" class="img-footer small mb-2" alt="" />
+                            <img src="../../client/img/logo-light.png" class="img-footer small mb-2" alt="" />
 
                             <div class="address mt-3">
                                 3298 Grant Street Longview, TX<br>United Kingdom 75601
@@ -346,7 +479,7 @@
                             </div>
                             <div class="address mt-3">
                                 <h5 class="fs-sm text-light">Secure Payments</h5>
-                                <div class="scr_payment"><img src="{{asset("")}}client/img/card.png" class="img-fluid" alt="" /></div>
+                                <div class="scr_payment"><img src="../../client/img/card.png" class="img-fluid" alt="" /></div>
                             </div>
                         </div>
                     </div>
@@ -382,10 +515,10 @@
 
                         <div class="quick_view_thmb">
                             <div class="quick_view_slide">
-                                <div class="single_view_slide"><img src="{{asset("")}}client/img/product/1.jpg" class="img-fluid" alt="" /></div>
-                                <div class="single_view_slide"><img src="{{asset("")}}client/img/product/2.jpg" class="img-fluid" alt="" /></div>
-                                <div class="single_view_slide"><img src="{{asset("")}}client/img/product/3.jpg" class="img-fluid" alt="" /></div>
-                                <div class="single_view_slide"><img src="{{asset("")}}client/img/product/4.jpg" class="img-fluid" alt="" /></div>
+                                <div class="single_view_slide"><img src="../../client/img/product/1.jpg" class="img-fluid" alt="" /></div>
+                                <div class="single_view_slide"><img src="../../client/img/product/2.jpg" class="img-fluid" alt="" /></div>
+                                <div class="single_view_slide"><img src="../../client/img/product/3.jpg" class="img-fluid" alt="" /></div>
+                                <div class="single_view_slide"><img src="../../client/img/product/4.jpg" class="img-fluid" alt="" /></div>
                             </div>
                         </div>
 
@@ -617,37 +750,37 @@
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-4 mb-3">
                         <div class="cats_side_wrap text-center">
-                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="{{asset("")}}client/img/tshirt.png" class="img-fluid" width="40" alt="" /></a></div></div>
+                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="../../client/img/tshirt.png" class="img-fluid" width="40" alt="" /></a></div></div>
                             <div class="sl_cat_02"><h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">T-Shirts</a></h6></div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-4 mb-3">
                         <div class="cats_side_wrap text-center">
-                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="{{asset("")}}client/img/pant.png" class="img-fluid" width="40" alt="" /></a></div></div>
+                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="../../client/img/pant.png" class="img-fluid" width="40" alt="" /></a></div></div>
                             <div class="sl_cat_02"><h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Pants</a></h6></div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-4 mb-3">
                         <div class="cats_side_wrap text-center">
-                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="{{asset("")}}client/img/fashion.png" class="img-fluid" width="40" alt="" /></a></div></div>
+                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="../../client/img/fashion.png" class="img-fluid" width="40" alt="" /></a></div></div>
                             <div class="sl_cat_02"><h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Women's</a></h6></div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-4 mb-3">
                         <div class="cats_side_wrap text-center">
-                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="{{asset("")}}client/img/sneakers.png" class="img-fluid" width="40" alt="" /></a></div></div>
+                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="../../client/img/sneakers.png" class="img-fluid" width="40" alt="" /></a></div></div>
                             <div class="sl_cat_02"><h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Shoes</a></h6></div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-4 mb-3">
                         <div class="cats_side_wrap text-center">
-                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="{{asset("")}}client/img/television.png" class="img-fluid" width="40" alt="" /></a></div></div>
+                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="../../client/img/television.png" class="img-fluid" width="40" alt="" /></a></div></div>
                             <div class="sl_cat_02"><h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Television</a></h6></div>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-4 mb-3">
                         <div class="cats_side_wrap text-center">
-                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="{{asset("")}}client/img/accessories.png" class="img-fluid" width="40" alt="" /></a></div></div>
+                            <div class="sl_cat_01"><div class="d-inline-flex align-items-center justify-content-center p-3 circle mb-2 gray"><a href="javascript:void(0);" class="d-block"><img src="../../client/img/accessories.png" class="img-fluid" width="40" alt="" /></a></div></div>
                             <div class="sl_cat_02"><h6 class="m-0 ft-medium fs-sm"><a href="javascript:void(0);">Accessories</a></h6></div>
                         </div>
                     </div>
@@ -671,7 +804,7 @@
                     <div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
                         <div class="cart_single d-flex align-items-center">
                             <div class="cart_selected_single_thumb">
-                                <a href="#"><img src="{{asset("")}}client/img/product/4.jpg" width="60" class="img-fluid" alt="" /></a>
+                                <a href="#"><img src="../../client/img/product/4.jpg" width="60" class="img-fluid" alt="" /></a>
                             </div>
                             <div class="cart_single_caption pl-2">
                                 <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Women Striped Shirt Dress</h4>
@@ -686,7 +819,7 @@
                     <div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
                         <div class="cart_single d-flex align-items-center">
                             <div class="cart_selected_single_thumb">
-                                <a href="#"><img src="{{asset("")}}client/img/product/7.jpg" width="60" class="img-fluid" alt="" /></a>
+                                <a href="#"><img src="../../client/img/product/7.jpg" width="60" class="img-fluid" alt="" /></a>
                             </div>
                             <div class="cart_single_caption pl-2">
                                 <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Floral Print Jumpsuit</h4>
@@ -701,7 +834,7 @@
                     <div class="d-flex align-items-center justify-content-between px-3 py-3">
                         <div class="cart_single d-flex align-items-center">
                             <div class="cart_selected_single_thumb">
-                                <a href="#"><img src="{{asset("")}}client/img/product/8.jpg" width="60" class="img-fluid" alt="" /></a>
+                                <a href="#"><img src="../../client/img/product/8.jpg" width="60" class="img-fluid" alt="" /></a>
                             </div>
                             <div class="cart_single_caption pl-2">
                                 <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Solid A-Line Dress</h4>
@@ -746,7 +879,7 @@
                     <div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
                         <div class="cart_single d-flex align-items-center">
                             <div class="cart_selected_single_thumb">
-                                <a href="#"><img src="{{asset("")}}client/img/product/4.jpg" width="60" class="img-fluid" alt="" /></a>
+                                <a href="#"><img src="../../client/img/product/4.jpg" width="60" class="img-fluid" alt="" /></a>
                             </div>
                             <div class="cart_single_caption pl-2">
                                 <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Women Striped Shirt Dress</h4>
@@ -758,11 +891,10 @@
                     </div>
 
                     <!-- Single Item -->
-
                     <div class="d-flex align-items-center justify-content-between br-bottom px-3 py-3">
                         <div class="cart_single d-flex align-items-center">
                             <div class="cart_selected_single_thumb">
-                                <a href="#"><img src="{{asset("")}}client/img/product/7.jpg" width="60" class="img-fluid" alt="" /></a>
+                                <a href="#"><img src="../../client/img/product/7.jpg" width="60" class="img-fluid" alt="" /></a>
                             </div>
                             <div class="cart_single_caption pl-2">
                                 <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Floral Print Jumpsuit</h4>
@@ -777,7 +909,7 @@
                     <div class="d-flex align-items-center justify-content-between px-3 py-3">
                         <div class="cart_single d-flex align-items-center">
                             <div class="cart_selected_single_thumb">
-                                <a href="#"><img src="{{asset("")}}client/img/product/8.jpg" width="60" class="img-fluid" alt="" /></a>
+                                <a href="#"><img src="../../client/img/product/8.jpg" width="60" class="img-fluid" alt="" /></a>
                             </div>
                             <div class="cart_single_caption pl-2">
                                 <h4 class="product_title fs-sm ft-medium mb-0 lh-1">Girls Solid A-Line Dress</h4>
@@ -787,7 +919,6 @@
                         </div>
                         <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
                     </div>
-
 
                 </div>
 
@@ -811,6 +942,7 @@
 
     <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
 
+
 </div>
 <!-- ============================================================== -->
 <!-- End Wrapper -->
@@ -819,17 +951,17 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
-<script src="{{asset("client/js/jquery.min.js")}}"></script>
-<script src="{{asset("client/js/popper.min.js")}}"></script>
-<script src="{{asset("client/js/bootstrap.min.js")}}"></script>
-<script src="{{asset("client/js/ion.rangeSlider.min.js")}}"></script>
-<script src="{{asset("client/js/slick.js")}}"></script>
-<script src="{{asset("client/js/slider-bg.js")}}"></script>
-<script src="{{asset("client/js/lightbox.js")}}"></script>
-<script src="{{asset("client/js/smoothproducts.js")}}"></script>
-<script src="{{asset("client/js/snackbar.min.js")}}"></script>
-<script src="{{asset("client/js/jQuery.style.switcher.js")}}"></script>
-<script src="{{asset("client/js/custom.js")}}"></script>
+<script src="../../client/js/jquery.min.js"></script>
+<script src="../../client/js/popper.min.js"></script>
+<script src="../../client/js/bootstrap.min.js"></script>
+<script src="../../client/js/ion.rangeSlider.min.js"></script>
+<script src="../../client/js/slick.js"></script>
+<script src="../../client/js/slider-bg.js"></script>
+<script src="../../client/js/lightbox.js"></script>
+<script src="../../client/js/smoothproducts.js"></script>
+<script src="../../client/js/snackbar.min.js"></script>
+<script src="../../client/js/jQuery.style.switcher.js"></script>
+<script src="../../client/js/custom.js"></script>
 <!-- ============================================================== -->
 <!-- This page plugins -->
 <!-- ============================================================== -->
@@ -863,6 +995,5 @@
 
 </body>
 
-<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/shop-single-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:45 GMT -->
+<!-- Mirrored from themezhub.net/kumo-demo-2/kumo/shoping-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:42 GMT -->
 </html>
-
