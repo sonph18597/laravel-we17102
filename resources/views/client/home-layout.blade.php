@@ -56,9 +56,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{route('route_add_to_cart')}}">
-                                    <i class="lni lni-shopping-basket"></i><span class="dn-counter">0</span>
-                                </a>
+{{--                                <a href="{{route('route_add_to_cart')}}">--}}
+{{--                                    <i class="lni lni-shopping-basket"></i><span class="dn-counter">0</span>--}}
+{{--                                </a>--}}
                             </li>
                         </ul>
                     </div>
@@ -941,13 +941,13 @@
                 <button onclick="closeWishlist()" class="close_slide"><i class="ti-close"></i></button>
             </div>
             <div class="right-ch-sideBar">
-                
+
             </div>
         </div>
     </div>
 
     <!-- Cart -->
-    
+
 <!-- ============================================================== -->
 <!-- End Wrapper -->
 <!-- ============================================================== -->
