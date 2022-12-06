@@ -46,16 +46,28 @@ class DatabaseSeeder extends Seeder
 //        DB::table("category")->insert(
 //            $array
 //        );
+//        $array=[];
+//        for($i=0;$i<10;$i++){
+//            array_push($array,[
+//                "category_id"=>1,
+//                "product_name"=>"Áo phông".($i+1),
+//                "price"=>"123123",
+//            ],
+//            );
+//        }
+//        DB::table("products")->insert(
+//            $array
+//        );
         $array=[];
         for($i=0;$i<10;$i++){
             array_push($array,[
-                "category_id"=>1,
-                "product_name"=>"Áo phông".($i+1),
-                "price"=>"123123",
+                "user_id"=>1,
+                "status"=>1,
+                "payment"=>"1234512",
             ],
             );
         }
-        DB::table("products")->insert(
+        DB::table("order")->insert(
             $array
         );
     }

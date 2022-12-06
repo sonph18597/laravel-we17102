@@ -219,6 +219,9 @@
                                     class="fa fa-circle-o"></i> Thêm sản phẩm</a></li>
                     </ul>
                 </li>
+                <li class=" active menu-open ">
+                    <a href="/order"><i class="fa fa-credit-card"></i> <span>Order</span></a>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
