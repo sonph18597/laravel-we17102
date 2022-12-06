@@ -262,7 +262,7 @@
                             <div class="row align-items-center">
                                 <div class="col-3">
                                     <!-- Image -->
-                                    <a href="product.html"><img src="{{ $item->image ? '' . Storage::url($item->image) : 'http://placehold.it/100x100'}}" alt="..." class="img-fluid"></a>
+                                    <a href=""><img src="{{ $item->image ? '' . Storage::url($item->image) : 'http://placehold.it/100x100'}}" alt="..." class="img-fluid"></a>
                                 </div>
                                 <div class="col d-flex align-items-center justify-content-between">
                                     <div class="cart_single_caption pl-2">
@@ -272,10 +272,6 @@
                                         <h4 class="fs-md ft-medium mb-3 lh-1">{{$item['productInfo']->price}}</h4>
                                         <select class="mb-2 custom-select w-auto">
                                             <option value="1" selected="">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
                                         </select>
                                     </div>
                                     <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>

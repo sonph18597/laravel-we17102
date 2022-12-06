@@ -9,23 +9,10 @@ use App\Models\Product;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session;
+use Session;
 
 class HomeController extends Controller
 {
-    //
-    public $product;
-    public $quantity;
-
-    /**
-     * Mounts the component on the template.
-     *
-     * @return void
-     */
-    public function mount(): void
-    {
-        $this->quantity = 1;
-    }
     private $v;
     public  function  __construct()
     {
@@ -51,22 +38,20 @@ class HomeController extends Controller
         return view('client.detail',$this->v);
     }
    public function cart(){
-    $session = new Session;
+  dd(Session('Cart'));
     return view('client.cart');
    }
 
    public function addToCart(Request $request,$id)
-    {
+    {  
         $product = DB::table('products')->where('id',$id)->first();
         if($product != null){
-            $oldCart = Session('cart') ? Session('cart') : null;
+            $oldCart = Session('Cart') ? Session('Cart') : null;
             $newCart = new Cart($oldCart);
             $newCart->Addcart($product,$id);
             $request->session()->put('Cart',$newCart);
             $this->v['newCart']= $newCart;
         }
-        
-        return view('client.cart',$this->v);
     }
 
 }

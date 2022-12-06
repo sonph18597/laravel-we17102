@@ -37,9 +37,9 @@
                                     @foreach ($productList as $item)
                                         <!-- Single -->
 
-                                        <div class="col-xl-3 col-lg-4 col-md-6 col-6">
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-6" id="change_item">
 
-                                            <div class="product_grid card b-0">
+                                            <div class="product_grid card b-0" >
                                                 <div
                                                     class="badge bg-info text-white position-absolute ft-regular ab-left text-upper">
                                                     Sale</div>
@@ -100,5 +100,17 @@
 
         </div>
     </section>
-    
+    <script>
+        function AddCart(id) {
+    console.log(122)
+            $.ajax({
+                url : '/addToCart/'+id,
+                type:'GET',
+            }).done(function(reponse){
+                console.log(10000)
+                $('.change_item').empty();
+                $('.change_item').html(reponse);
+            } )
+        }
+    </script>
 @endsection

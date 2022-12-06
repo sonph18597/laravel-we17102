@@ -56,7 +56,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{route('route_add_to_cart')}}">
+                                <a href="">
                                     <i class="lni lni-shopping-basket"></i><span class="dn-counter">0</span>
                                 </a>
                             </li>
@@ -966,6 +966,7 @@
 <script src="../../client/js/snackbar.min.js"></script>
 <script src="../../client/js/jQuery.style.switcher.js"></script>
 <script src="../../client/js/custom.js"></script>
+
 <!-- ============================================================== -->
 <!-- This page plugins -->
 <!-- ============================================================== -->
@@ -996,17 +997,7 @@
         document.getElementById("Search").style.display = "none";
     }
 </script>
-<script>
-    function AddCart(id) {
-        $.ajax({
-            url : '/addToCart/'+id,
-            type:'GET',
-        }).done(function(reponse){
-            $('.cart_select_items').empty();
-            $('.cart_select_items').html(reponse);
-        } )
-    }
-</script>
+
 </body>
 
 <!-- Mirrored from themezhub.net/kumo-demo-2/kumo/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Nov 2022 17:39:23 GMT -->
