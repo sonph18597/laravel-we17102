@@ -5,7 +5,9 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
@@ -71,5 +73,11 @@ class CategoryController extends Controller
         $objItem = $modelDanhMuc->loadOne($id);
         $this->v['objItem']= $objItem;
         return view('admin.category.detail', $this->v);
+    }
+    public function delete($id){
+        $data = DB::table("category")->where('id',$id);
+        $data->delete();
+
+        return redirect()->route('route_BackEnd_Category_index');
     }
 }
