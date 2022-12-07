@@ -55,11 +55,7 @@
                                     <i class="lni lni-heart"></i><span class="dn-counter">2</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="{{route('route_add_to_cart')}}">
-                                    <i class="lni lni-shopping-basket"></i><span class="dn-counter">0</span>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
