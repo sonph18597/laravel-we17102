@@ -32,45 +32,57 @@ class HomeController extends Controller
         $this->v = [];
     }
 
-    public function index(){
+    public function index()
+    {
         $productList = $this->getProduct();
         $this->v['productList'] = $productList;
-        return view('client.home',$this->v);
+        return view('client.home', $this->v);
     }
-    public function getProduct(){
+    public function getProduct()
+    {
         $productList = Product::all();
         return $productList;
     }
-    public function getCategory(){
+    public function getCategory()
+    {
         $getCategory = Category::all();
         return $getCategory;
     }
 
-    public function product_detail($id, Request $request){
+    public function product_detail($id, Request $request)
+    {
         $listProduct = $this->getProduct();
-        $this->v['listProduct']=$listProduct;
+        $this->v['listProduct'] = $listProduct;
         $modelctSanPham = new Product();
         $objItem = $modelctSanPham->loadOne($id);
-        $this->v['objItem']= $objItem;
-        return view('client.detail',$this->v);
+        $this->v['objItem'] = $objItem;
+        return view('client.detail', $this->v);
     }
-   public function cart(){
-    $session = new Session;
-    return view('client.cart');
-   }
-
-   public function addToCart(Request $request,$id)
+    public function cart()
     {
-        $product = DB::table('products')->where('id',$id)->first();
-        if($product != null){
-            $oldCart = Session('cart') ? Session('cart') : null;
-            $newCart = new Cart($oldCart);
-            $newCart->Addcart($product,$id);
-            $request->session()->put('Cart',$newCart);
-            $this->v['newCart']= $newCart;
-        }
-        
-        return view('client.cart',$this->v);
+        $cart = Session('cart');
+        dd($cart);
+        return view('client.cart');
     }
-
+    public function addToCart(Request $request)
+    {
+        $product = DB::table('products')->where('id', $request->id)->first();
+        $productCart = [
+            'id' =>$request->id,
+            'quantity' => $request->quantity,
+            'productInfo' => $product
+        ];
+        if(!isset($_SESSION['Cart'] )){
+            $_SESSION['Cart'] = [];
+        }
+        array_push(  $_SESSION['Cart'],$productCart);
+        $newCart = $_SESSION['Cart'];
+        $this->v['newCart'] = $newCart;
+        $subtotal = 0;
+        foreach ($newCart as $item){
+            $subtotal = $item['productInfo']->price * $item['quantity'];
+        }
+        $this->v['subtotal'] = $subtotal;         
+        return view('client.cart', $this->v);
+    }
 }
