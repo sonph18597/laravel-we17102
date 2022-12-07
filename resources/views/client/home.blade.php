@@ -64,12 +64,14 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     @endforeach
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
                 </div>
             </div>
 
