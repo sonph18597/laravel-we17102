@@ -41,4 +41,6 @@ Route::middleware(['auth'])->group(function () {
     Route::match(['get', 'post'], '/product/add', "admin\ProductController@add");
     Route::get('/product/detail/{id}', 'admin\ProductController@detail')->name('route_BackEnd_Product_detail');
     Route::post('/product/update/{id}', 'admin\ProductController@update')->name('route_BackEnd_Product_update');
+    //order
+    Route::get('/order', 'admin\OrderController@index')->name('route_BackEnd_Order_index');
 });

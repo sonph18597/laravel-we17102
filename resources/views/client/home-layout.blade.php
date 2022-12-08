@@ -55,7 +55,6 @@
                                     <i class="lni lni-heart"></i><span class="dn-counter">2</span>
                                 </a>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -937,13 +936,13 @@
                 <button onclick="closeWishlist()" class="close_slide"><i class="ti-close"></i></button>
             </div>
             <div class="right-ch-sideBar">
-                
+
             </div>
         </div>
     </div>
 
     <!-- Cart -->
-    
+
 <!-- ============================================================== -->
 <!-- End Wrapper -->
 <!-- ============================================================== -->
