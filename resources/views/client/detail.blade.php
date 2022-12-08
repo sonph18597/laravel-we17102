@@ -234,8 +234,7 @@
                                     <form action="{{ route('route_add_to_cart') }}" method="GET">
                                     <div class="col-12 col-lg-auto">
                                         <!-- Quantity -->
-                                        <input name="quantity" class="mb-2 custom-select"/>
-                                           
+                                        <input name="quantity" class="mb-2 custom-select" required/>
                                     </div>
                                     <input type="text" name="id" value="{{$objItem->id}}" hidden >
                                     <div class="col-12 col-lg">

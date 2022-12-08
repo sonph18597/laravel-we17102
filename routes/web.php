@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'home\HomeController@index')->name('home');
 Route::get('/home/product/detail/{id}','home\HomeController@product_detail')->name('route_FrontEnd_Product_detail');
-
-Route::get('/cart','home\HomeController@cart')->name('route_FrontEnd_cart');
 Route::get('/addToCart','home\HomeController@addToCart')->name('route_add_to_cart');
-Route::get('/cartView','home\CartController@render');
+Route::get('/cart/delelte/{index}','home\HomeController@deleteCart')->name('cart_detele');
+Route::get('/home/category/{id}','home\HomeController@category')->name('home_category');
+Route::get('/home/addOrder','home\HomeController@addOrder')->name('add_order');
 
 Route::get('/login',['as'=>'login','uses'=>'Auth\LoginController@getLogin']);
 Route::post('/login',['as'=>'login','uses'=>'Auth\LoginController@postLogin']);
