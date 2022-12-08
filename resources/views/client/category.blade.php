@@ -8,7 +8,7 @@
 
                     <ul class="nav nav-tabs b-0 d-flex align-items-center justify-content-center simple_tab_links mb-4" id="myTab" role="tablist">
                         <li class="nav-item" >
-                            <a class="nav-link" href="{{route('home')}}">All</a>
+                            <a class="nav-link" id="all-tab" href="{{route('home')}}" >All</a>
                         </li>
                         @foreach ($categoryList as $item)
                             <li class="nav-item" >
@@ -16,8 +16,6 @@
                                 </a>
                             </li>
                         @endforeach
-                        
-    
                     </ul>
 
                     <div class="tab-content" id="myTabContent">
@@ -36,7 +34,7 @@
                                                 <div class="card-body p-0">
                                                     <div class="shop_thumb position-relative">
                                                         <a class="card-img-top d-block overflow-hidden" href="{{route('route_FrontEnd_Product_detail',['id'=>$item->id])}}"><img class="card-img-top" src="{{$item->image?''.Storage::url($item->image):'http://placehold.it/100x100'}}" alt="..." height="300px" ></a>
-                                            
+                                                     
                                                     </div>
                                                 </div>
                                                 <div class="card-footer b-0 p-0 pt-2 bg-white d-flex align-items-start justify-content-between">
@@ -57,14 +55,12 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     @endforeach
                                 </div>
                             </div>
                         </div>
 
                     </div>
-
                 </div>
             </div>
 

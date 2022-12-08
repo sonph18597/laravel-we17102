@@ -256,8 +256,7 @@
             <div class="row justify-content-between">
                 <div class="col-12 col-lg-7 col-md-12">
                     <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x mb-4">
-                        @foreach ($newCart as $item )
-                      
+                        @foreach ($newCart as $index=>$item )
                         <li class="list-group-item">
                             <div class="row align-items-center">
                                 <div class="col-3">
@@ -271,34 +270,20 @@
                                         <p class="mb-3 lh-1"><span class="text-dark">Color: {{$item['productInfo']->color}}</span></p>
                                         <h4 class="fs-md ft-medium mb-3 lh-1">VND{{number_format($item['productInfo']->price,3,",")}}</h4>
                                         <input value="{{$item['quantity']}}" class="mb-2 custom-select w-auto"/>
-                                            
                                     </div>
-                                    <div class="fls_last"><button class="close_slide gray"><i class="ti-close"></i></button></div>
+                                    <div class="fls_last">
+                                        <a href="{{route('cart_detele',['index'=>$index])}}">
+                                            <button class="close_slide gray">
+                                                <i class="ti-close"></i>
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         @endforeach
 
                     </ul>
-
-                    <div class="row align-items-end justify-content-between mb-10 mb-md-0">
-                        <div class="col-12 col-md-7">
-                            <!-- Coupon -->
-                            <form class="mb-7 mb-md-0">
-                                <label class="fs-sm ft-medium text-dark">Coupon code:</label>
-                                <div class="row form-row">
-                                    <div class="col">
-                                        <input class="form-control" type="text" placeholder="Enter coupon code*">
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn btn-dark" type="submit">Apply</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                       
-                    </div>
-                </div>
 
                 <div class="col-12 col-md-12 col-lg-4">
                     <div class="card mb-4 gray mfliud">
@@ -321,14 +306,10 @@
                             </ul>
                         </div>
                     </div>
-
-                    <a class="btn btn-block btn-dark mb-3" href="checkout.html">Proceed to Checkout</a>
-
-                    <a class="btn-link text-dark ft-medium" href="shop.html">
-                        <i class="ti-back-left mr-2"></i> Continue Shopping
-                    </a>
+                    
+                    <a class="btn btn-block btn-dark mb-3" href="{{route('add_order')}}">Proceed to Checkout</a>
+                   
                 </div>
-
             </div>
 
         </div>
