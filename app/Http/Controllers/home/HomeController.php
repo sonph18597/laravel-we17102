@@ -101,23 +101,4 @@ class HomeController extends Controller
         return view('client.category', $this->v);
     }
 
-    public function addOrder(){
-        $subtotal = 0;
-        foreach ($_SESSION['Cart'] as $item) {
-            $subtotal =  $subtotal + ($item['productInfo']->price * $item['quantity']);
-        }
-        $pramOrder[] = [
-            'user_id' => null,
-            'status' => 1, 
-            'payment'=> $subtotal
-        ];
-        $order = new Order();
-        $order->saveNew($pramOrder);
-        foreach($_SESSION['Cart'] as $item){
-            $param = [
-                
-            ];
-            DB::table('order_detail')->saveNew();
-        }
-    }
 }

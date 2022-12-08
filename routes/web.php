@@ -14,32 +14,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'home\HomeController@index')->name('home');
-Route::get('/home/product/detail/{id}','home\HomeController@product_detail')->name('route_FrontEnd_Product_detail');
-Route::get('/addToCart','home\HomeController@addToCart')->name('route_add_to_cart');
-Route::get('/cart/delelte/{index}','home\HomeController@deleteCart')->name('cart_detele');
-Route::get('/home/category/{id}','home\HomeController@category')->name('home_category');
-Route::get('/home/addOrder','home\HomeController@addOrder')->name('add_order');
+Route::get('/home/product/detail/{id}', 'home\HomeController@product_detail')->name('route_FrontEnd_Product_detail');
+Route::get('/addToCart', 'home\HomeController@addToCart')->name('route_add_to_cart');
+Route::get('/cart/delelte/{index}', 'home\HomeController@deleteCart')->name('cart_detele');
+Route::get('/home/category/{id}', 'home\HomeController@category')->name('home_category');
 
-Route::get('/login',['as'=>'login','uses'=>'Auth\LoginController@getLogin']);
-Route::post('/login',['as'=>'login','uses'=>'Auth\LoginController@postLogin']);
-Route::get('/logout',['as'=>'logout','uses'=>'Auth\LoginController@getLogout']);
+Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@getLogin']);
+Route::post('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@postLogin']);
+Route::get('/logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@getLogout']);
 
 
-Route::middleware(['auth'])->group(function (){
+Route::middleware(['auth'])->group(function () {
     // tất cả đường link muốn bảo vệ chỉ cần viết vào đây
     //user
     Route::get('/user', 'admin\UserController@index')->name('route_BackEnd_User_index');
-    Route::match(['get','post'],'/user/add',"admin\UserController@add");
-    Route::get('/user/detail/{id}','admin\UserController@detail')->name('route_BackEnd_User_detail');
-    Route::post('/user/update/{id}','admin\UserController@update')->name('route_BackEnd_User_update');
+    Route::match(['get', 'post'], '/user/add', "admin\UserController@add");
+    Route::get('/user/detail/{id}', 'admin\UserController@detail')->name('route_BackEnd_User_detail');
+    Route::post('/user/update/{id}', 'admin\UserController@update')->name('route_BackEnd_User_update');
     //category
-    Route::get('/category','admin\CategoryController@index')->name('route_BackEnd_Category_index');
-    Route::match(['get','post'],'/category/add',"admin\CategoryController@add");
-    Route::get('/category/detail/{id}','admin\CategoryController@detail')->name('route_BackEnd_Category_detail');
-    Route::post('/category/update/{id}','admin\CategoryController@update')->name('route_BackEnd_Category_update');
+    Route::get('/category', 'admin\CategoryController@index')->name('route_BackEnd_Category_index');
+    Route::match(['get', 'post'], '/category/add', "admin\CategoryController@add");
+    Route::get('/category/detail/{id}', 'admin\CategoryController@detail')->name('route_BackEnd_Category_detail');
+    Route::post('/category/update/{id}', 'admin\CategoryController@update')->name('route_BackEnd_Category_update');
     //product
     Route::get('/product', 'admin\ProductController@index')->name('route_BackEnd_Product_index');
-    Route::match(['get','post'],'/product/add',"admin\ProductController@add");
-    Route::get('/product/detail/{id}','admin\ProductController@detail')->name('route_BackEnd_Product_detail');
-    Route::post('/product/update/{id}','admin\ProductController@update')->name('route_BackEnd_Product_update');
+    Route::match(['get', 'post'], '/product/add', "admin\ProductController@add");
+    Route::get('/product/detail/{id}', 'admin\ProductController@detail')->name('route_BackEnd_Product_detail');
+    Route::post('/product/update/{id}', 'admin\ProductController@update')->name('route_BackEnd_Product_update');
 });
