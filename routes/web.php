@@ -31,11 +31,13 @@ Route::middleware(['auth'])->group(function () {
     Route::match(['get', 'post'], '/user/add', "admin\UserController@add");
     Route::get('/user/detail/{id}', 'admin\UserController@detail')->name('route_BackEnd_User_detail');
     Route::post('/user/update/{id}', 'admin\UserController@update')->name('route_BackEnd_User_update');
-    //category
-    Route::get('/category', 'admin\CategoryController@index')->name('route_BackEnd_Category_index');
-    Route::match(['get', 'post'], '/category/add', "admin\CategoryController@add");
-    Route::get('/category/detail/{id}', 'admin\CategoryController@detail')->name('route_BackEnd_Category_detail');
-    Route::post('/category/update/{id}', 'admin\CategoryController@update')->name('route_BackEnd_Category_update');
+
+    Route::get('/category','admin\CategoryController@index')->name('route_BackEnd_Category_index');
+    Route::match(['get','post'],'/category/add',"admin\CategoryController@add");
+    Route::get('/category/detail/{id}','admin\CategoryController@detail')->name('route_BackEnd_Category_detail');
+    Route::post('/category/update/{id}','admin\CategoryController@update')->name('route_BackEnd_Category_update');
+    Route::get('/category/delete/{id}','admin\CategoryController@delete')->name('Category_delete');
+
     //product
     Route::get('/product', 'admin\ProductController@index')->name('route_BackEnd_Product_index');
     Route::match(['get', 'post'], '/product/add', "admin\ProductController@add");

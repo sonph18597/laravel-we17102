@@ -158,7 +158,7 @@
                             <th class="text-center">Size</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">View</th>
-                            <th class="text-center">Category_ID</th>
+
 
                         </tr>
 
@@ -183,8 +183,6 @@
                                 @endif
                             </td>
                             <td class="text-center">{{$item->view}}</td>
-                            <td class="text-center">{{$item->category_id}}</td>
-
                         </tr>
                         @endforeach
                     </table>
