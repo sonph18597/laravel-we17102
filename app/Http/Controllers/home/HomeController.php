@@ -78,11 +78,12 @@ class HomeController extends Controller
         array_push(  $_SESSION['Cart'],$productCart);
         $newCart = $_SESSION['Cart'];
         $this->v['newCart'] = $newCart;
+//        session_destroy();die;
         $subtotal = 0;
         foreach ($newCart as $item){
             $subtotal = $item['productInfo']->price * $item['quantity'];
         }
-        $this->v['subtotal'] = $subtotal;         
+        $this->v['subtotal'] = $subtotal;
         return view('client.cart', $this->v);
     }
 }

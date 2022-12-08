@@ -58,17 +58,17 @@ class DatabaseSeeder extends Seeder
 //        DB::table("products")->insert(
 //            $array
 //        );
-        $array=[];
-        for($i=0;$i<10;$i++){
-            array_push($array,[
-                "user_id"=>1,
-                "status"=>1,
-                "payment"=>"1234512",
-            ],
-            );
-        }
-        DB::table("order")->insert(
-            $array
-        );
+//        $array=[];
+//        for($i=0;$i<10;$i++){
+//            array_push($array,[
+//                "user_id"=>1,
+//                "status"=>1,
+//                "payment"=>"1234512",
+//            ],
+//            );
+//        }
+//        DB::table("order")->insert(
+//            $array
+//        );
     }
 }

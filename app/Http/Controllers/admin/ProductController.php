@@ -7,6 +7,7 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
@@ -87,6 +88,11 @@ class ProductController extends Controller
     public function uploadFile($file) {
         $fileName = time().'_'.$file->getClientOriginalName();
         return $file->storeAs('cmnd',$fileName,'public');
+    }
+    public function delete($id){
+        $data = DB::table("products")->where('id',$id);
+        $data->delete();
+        return redirect()->route('route_BackEnd_Product_index');
     }
 }
 

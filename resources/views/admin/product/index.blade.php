@@ -158,7 +158,7 @@
                             <th class="text-center">Size</th>
                             <th class="text-center">Status</th>
                             <th class="text-center">View</th>
-
+                            <th class="text-center"></th>
 
                         </tr>
 
@@ -183,6 +183,7 @@
                                 @endif
                             </td>
                             <td class="text-center">{{$item->view}}</td>
+                            <td> <a href="{{route("Product_delete",['id'=>$item->id])}}">Xoa</a></td>
                         </tr>
                         @endforeach
                     </table>

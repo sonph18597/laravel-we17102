@@ -171,6 +171,7 @@
                                         }
                                                         ?>
                                 </td>
+                                <td> <a href="{{route("Order_delete",['id'=>$item->id])}}">Xoa</a></td>
 
                             </tr>
                         @endforeach

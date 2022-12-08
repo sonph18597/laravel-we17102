@@ -32,6 +32,7 @@ Route::middleware(['auth'])->group(function (){
     Route::match(['get','post'],'/user/add',"admin\UserController@add");
     Route::get('/user/detail/{id}','admin\UserController@detail')->name('route_BackEnd_User_detail');
     Route::post('/user/update/{id}','admin\UserController@update')->name('route_BackEnd_User_update');
+
     //category
     Route::get('/category','admin\CategoryController@index')->name('route_BackEnd_Category_index');
     Route::match(['get','post'],'/category/add',"admin\CategoryController@add");
@@ -43,6 +44,8 @@ Route::middleware(['auth'])->group(function (){
     Route::match(['get','post'],'/product/add',"admin\ProductController@add");
     Route::get('/product/detail/{id}','admin\ProductController@detail')->name('route_BackEnd_Product_detail');
     Route::post('/product/update/{id}','admin\ProductController@update')->name('route_BackEnd_Product_update');
+    Route::get('/product/delete/{id}','admin\ProductController@delete')->name('Product_delete');
     //order
     Route::get('/order', 'admin\OrderController@index')->name('route_BackEnd_Order_index');
+    Route::get('/order/delete/{id}','admin\OrderController@delete')->name('Order_delete');
 });

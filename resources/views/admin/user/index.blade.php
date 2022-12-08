@@ -166,9 +166,11 @@
                             <td class="text-center"><img id="mat_truoc_preview"
                                                          src="{{ $item->avatar?''.Storage::url($item->avatar):'http://placehold.it/100x100' }}"
                                                          alt="your image"
-                                                         style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/></td>
+                                                         style="max-width: 200px; height:100px; margin-bottom: 10px;" class="img-responsive"/>
+                            </td>
 
                         </tr>
+
                         @endforeach
                     </table>
                 </div>

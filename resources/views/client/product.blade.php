@@ -68,16 +68,7 @@
 
                         <li><a href="#">Home</a>
                             <ul class="nav-dropdown nav-submenu">
-                                <li><a href="index.html">Home 1</a></li>
-                                <li><a href="home-2.html">Home 2</a></li>
-                                <li><a href="home-3.html">Home 3</a></li>
-                                <li><a href="home-4.html">Home 4</a></li>
-                                <li><a href="home-5.html">Home 5</a></li>
-                                <li><a href="home-6.html">Home 6</a></li>
-                                <li><a href="home-7.html">Home 7</a></li>
-                                <li><a href="home-8.html">Home 8</a></li>
-                                <li><a href="home-9.html">Home 9</a></li>
-                                <li><a href="home-10.html">Home 10</a></li>
+                                <li><a href="">Home 1</a></li>
                             </ul>
                         </li>
 
